@@ -13,16 +13,19 @@ class Selecao(object):
             valorMax += value
             aux_values.append(value)
 
-        for i in range(tam):
-            aux = 0
-            value = random.randrange(1,valorMax)
-            
-            for j in range(len(valores_indv)):
-                aux += aux_values[j]
-                if(value<=aux):
-                    aptos.append(populacao[j].copy())
-                    break
-
+        print('len:',tam)
+        if not(valorMax == 0):
+            for i in range(tam):
+                aux = 0
+                value = random.randrange(0,valorMax)
+                
+                for j in range(len(valores_indv)):
+                    aux += aux_values[j]
+                    if(value<=aux):
+                        aptos.append(populacao[j].copy())
+                        break
+        else:
+            return None
         return aptos
 
     @staticmethod

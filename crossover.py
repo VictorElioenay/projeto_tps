@@ -3,15 +3,15 @@ import random
 class Crossover(object):
 
     @staticmethod
-    def crossover(aptos,corte):
+    def crossover(aptos,corte,tam_pop):
         tam = len(aptos)
         populacao = []
         indvs = []
 
-        for i in range(tam):
+        for i in range(tam_pop):
             index = random.randrange(0,tam)
             index2 = random.randrange(0,tam)
-            
+                        
             while index2==index:
                 index2 = random.randrange(0,tam)
         
@@ -26,7 +26,7 @@ class Crossover(object):
             indvs.append(part1)
             indvs.append(part3)
         
-        for i in range(tam):
+        for i in range(tam_pop):
             populacao.append(indvs[i])
 
         return populacao
