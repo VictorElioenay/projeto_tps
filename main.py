@@ -13,6 +13,8 @@ grafo = [   [B,1,1,B,B,9],#A
             [9,B,B,3,B,B] #F
         ]
 
+f = open("relatorio.txt", "a")
+
 def funcAptidao(populacao):
     global grafo
     valores_indv = []
@@ -39,8 +41,13 @@ elitismo = int(input('elitismo:'))
 populacao = Populacao.gerarPopulacaoIni(tam_pop,grafo.__len__())
 
 print('\nPopulação Inicial:')
+f.write('\nPopulação Inicial:')
 for i in populacao:
     print(i)
+    f.write(str(i))
+    f.write('\n')
+
+
 
 for geracao in range(num_gen):
 
@@ -74,8 +81,19 @@ for geracao in range(num_gen):
     valores_indv = funcAptidao(populacao)
 
     print('\nGeração:',geracao)
+    f.write('\nGeração:')
+    f.write(str(geracao))
+    f.write('\n')
+
+
     for i in range(len(populacao)):
         print(populacao[i],valores_indv[i])
+        f.write(str(populacao[i]))
+        f.write(str(valores_indv[i]))
+        f.write('\n')
+
+        
+
 
 # print('\nResultado final:')
 # for indv in populacao:
