@@ -1,6 +1,6 @@
 ## Sobre
 
-Este é um trabalho da disciplina Tópicos de Sistemas Inteligente, com o tema de algoritmos genéticos. A aplicação no caso é utilizada para encontrar o melhor caminho em um grafo, utilizando diferentes parâmetros para obtenção de um melhor resultado, sendo eles:
+Este é um trabalho da disciplina Tópicos de Sistemas Inteligentes, com o tema de algoritmos genéticos. A aplicação no caso é utilizada para encontrar o melhor caminho em um grafo, utilizando diferentes parâmetros para obtenção de um melhor resultado, sendo eles:
 * Tamanho da população
 * Número de gerações
 * Posição de corte para crossover

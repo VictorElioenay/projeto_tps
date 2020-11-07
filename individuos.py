@@ -1,7 +1,9 @@
 import random
 
+# O indivíduo no caso é o caminho que sai do primeiro potno do grafo e vai até o último ponto.
 class Individo(object):
 
+#O indivíduo é gerado aleatóriamente, o que pode acabar gerando um caminho impossível.
     @staticmethod
     def gerar(n):
         indv = [0]
