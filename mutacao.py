@@ -2,6 +2,7 @@ import random
 
 class Mutacao(object):
 
+    ## Com base na taxa é feita uma alteração numa posição aleatória 
     @staticmethod
     def mutar(populacao,taxa):
         chance_true = 100*taxa

@@ -2,6 +2,7 @@ import random
 
 class Crossover(object):
 
+    ## Com base na posição de corte dois individuos aptos são elegidos aleatoriamento para fazerem crossover
     @staticmethod
     def crossover(aptos,corte,tam_pop):
         tam = len(aptos)

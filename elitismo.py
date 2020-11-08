@@ -1,5 +1,6 @@
 class Elitismo(object):
 
+    ## Elege nos n individuos mais aptos para a próxima geração
     @staticmethod
     def escolher(populacao,valores_indv,elitismo):
         aux = []

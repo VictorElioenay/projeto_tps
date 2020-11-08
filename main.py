@@ -4,6 +4,8 @@ from crossover import Crossover
 from mutacao import Mutacao
 from elitismo import Elitismo
 
+
+## Define o grafo
 B = float('inf') #Infinito de pé B
 grafo = [   [B,1,1,B,B,9],#A
             [1,B,2,B,B,B],#B
@@ -31,6 +33,8 @@ def funcAptidao(populacao):
 
     return valores_indv
 
+## São as entradas dos parâmetros da função
+
 tam_pop = int(input('tam_pop:'))
 num_gen = int(input('num_gen:'))
 corte_pos = int(input('corte_pos:'))
@@ -38,6 +42,7 @@ metd_sel = input('metd_sel:').lower()
 tax_mut = float(input('tax_mut:'))
 elitismo = int(input('elitismo:'))
 
+## A população é criada
 populacao = Populacao.gerarPopulacaoIni(tam_pop,grafo.__len__())
 
 print('\nPopulação Inicial:')
@@ -48,13 +53,13 @@ for i in populacao:
     f.write('\n')
 
 
-
+## Vai repetir todo o proceso de criação de uma nova geração até atingir o numero de gerações definido
 for geracao in range(num_gen):
 
     valores_indv = funcAptidao(populacao)
     aptos = None
 
-    # Retirar ind infinitos
+    # Retirar ind infinitos (que são soluções impossíveis)
 
     for i in range(len(valores_indv)):
         if valores_indv[i] == B:
@@ -92,15 +97,4 @@ for geracao in range(num_gen):
         f.write(str(valores_indv[i]))
         f.write('\n')
 
-        
-
-
-# print('\nResultado final:')
-# for indv in populacao:
-#     index = 0
-#     for i in range(len(indv)):
-#         if indv[i] == 0:
-#             index=i
-#     print(indv[index:])
-
-# elitismo = int(input('elitismo:'))
+    

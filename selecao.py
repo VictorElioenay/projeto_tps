@@ -8,6 +8,7 @@ class Selecao(object):
         aptos = []
         aux_values = []
         
+        ## Pega o maior valor e o menor valor dentre os iniduos soma e depois subtrai o valor do individuo atual, assim nós obtemos um menor valor valor para caminhos mais custosos e um maior valor para caminhos menos custosos
         for i in valores_indv:
             value = max(valores_indv)+min(valores_indv)-i
             valorMax += value
@@ -37,6 +38,7 @@ class Selecao(object):
             selecionados = []
             selecionados_values = []
 
+        ## No torneio o indivuo que tiver o menor valor vence
             for j in range(n):
                 index = random.randrange(0,tam)
                 selecionados.append(populacao[index].copy())
